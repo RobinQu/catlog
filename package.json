@@ -1,0 +1,24 @@
+{
+  "name": "cat",
+  "version": "0.0.1",
+  "description": "Persit your logs to couchdb",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RobinQu/catlog"
+  },
+  "keywords": [
+    "log",
+    "couchdb"
+  ],
+  "dependencies": {
+    "colors": "0.x.x",
+    "cycle": "1.0.x",
+    "eyes": "0.1.x",
+    "stack-trace": "0.0.x"
+  },
+  "author": "RobinQu",
+  "license": "BSD"
+}
