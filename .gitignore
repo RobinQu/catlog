@@ -1,0 +1,6 @@
+*.log
+*.db
+*.sql
+node_modules
+tmp
+temp
