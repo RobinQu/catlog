@@ -14,10 +14,12 @@
     "couchdb"
   ],
   "dependencies": {
-    "colors": "0.x.x",
-    "cycle": "1.0.x",
-    "eyes": "0.1.x",
-    "stack-trace": "0.0.x"
+    "colors": "*",
+    "cycle": "*",
+    "eyes": "*",
+    "stack-trace": "*",
+    "dateformat": "*",
+    "nano": "*"
   },
   "author": "RobinQu",
   "license": "BSD"
