@@ -105,9 +105,10 @@ HOW?
 		  }
 		};
 		
-		//Use it as normal. You call optionally pass something your logger
-		var mylogger = catlog.Container.get("myapp", {prefix:"rock!"});
-		mylogger.addLogger(MyLogger);
+		//Use it as normal. 
+		var mylogger = catlog.Container.get("myapp");
+		//You call optionally pass something your logger
+		mylogger.addLogger(MyLogger, {prefix:"rock!"});
 		
 		mylogger.log("good!");
 		mylogger.error("damm it!");
