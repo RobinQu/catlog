@@ -1,7 +1,8 @@
 module.exports = {
   loggers: {
     Console: require("./lib/loggers/console"),
-    CouchDB: require("./lib/loggers/couch")
+    CouchDB: require("./lib/loggers/couch"),
+    Core: require("./lib/loggers/core")
   },
   Container: require("./lib/container"),
   setup: function(opt) {
