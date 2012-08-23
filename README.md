@@ -127,4 +127,4 @@ HOW?
 
 Contribute
 ----------
-Pull requests are welcomed. Submit your own loggers or bug fixs, please!
+Pull requests are welcomed. Submit your own loggers or bug fixes, please!
