@@ -2,6 +2,11 @@ CATLOG
 ======
 Yet another logging utility for nodejs
 
+INSTALL
+-------
+
+	npm install catlog
+
 WHY?
 ----
 We already have `winston`, `log4js`, `log.js`, etc. Why bother to make another logger? After reading docs and source code for 2 hours, I didn't manage to setup my logger based on any projects mentioned before. I think it's of anti-humanism to force most people to learn all the options and setup the tools for very common purpose. Who cares what color should be used in different logging themes?!

@@ -1,5 +1,5 @@
 {
-  "name": "cat",
+  "name": "catlog",
   "version": "0.0.1",
   "description": "Persit your logs to couchdb",
   "main": "index.js",
