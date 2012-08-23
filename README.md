@@ -20,7 +20,7 @@ Minimum setup that meets the demands of majorities by default:
 * It provodes four logging level: `trace`, `log`, `warn`, `error` and `debug`
 * It will print out timestamp and current call info even if you do nothing but `console.trace()`
 * It will replace `console` object and will output log to  `stdout` and `stderr` with text colored.
-* It's able to cram multiple objects into a single logging call, like `logger.log(a,b,c,d)`
+* It's able to cram multiple objects into a single logging call, like `console.log(a,b,c,d)`
 * It tries to print objects in pretty format and will prevent cycling references
 * It support keyword replacements in log content, e.g. 
  
