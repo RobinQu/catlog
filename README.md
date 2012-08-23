@@ -1,6 +1,6 @@
 CATLOG
 ======
-Yet another logging utility for nodejs
+Logging utility for nodejs without pain
 
 INSTALL
 -------
@@ -13,15 +13,21 @@ We already have `winston`, `log4js`, `log.js`, etc. Why bother to make another l
 
 WHAT?
 -----
-By default:
+Minimum setup that meets the demands of majorities by default:
 
     require("catlog").setup();
 
-* It provodes four logging level: `log`, `warn`, `error` and `debug`
+* It provodes four logging level: `trace`, `log`, `warn`, `error` and `debug`
+* It will print out timestamp and current call info even if you do nothing but `console.trace()`
 * It will replace `console` object and will output log to  `stdout` and `stderr` with text colored.
-* It's able to cram multiple objects into a single logging call, like `logger.log(a,b,c,)`
+* It's able to cram multiple objects into a single logging call, like `logger.log(a,b,c,d)`
 * It tries to print objects in pretty format and will prevent cycling references
-* It support keyword replacements in log content, e.g. "log level: {{level}}"  will change to "log level: warn" if you are writing a warning log. Keyword including:
+* It support keyword replacements in log content, e.g. 
+ 
+		"log level: {{level}}"
+		//will change to "log level: warn" if you are writing a warning log
+	 
+	Keywords including:
 	* level: logging level
 	* category: logging category
 	* timestamp: ISO date string, like "2012-08-23T15:26:01"
@@ -35,7 +41,22 @@ By default:
 
 HOW?
 ----
-
+* To satisfy the demands of minorities like you, please go on reading
+* To configure minimum setup
+		
+		//default settings
+		require("catlog").setup(replaceConsole=true, {
+			printf: false, //enable printf-like replacemnet?
+			coloring: true //color the texts in console?
+			colors: {
+			    debug: "blue",
+			    log: "green",
+			    warn: "yellow",
+			    error: "red",
+			    category: "cyan",
+			    trace: "grey"
+			}
+		});	
 * To categorize logs. A category is called a `Container`. To create a log category, you should create your own `Container` and assign at least one `logger` to it.
     
         var catlog = require("catlog");
@@ -91,6 +112,17 @@ HOW?
 		
 		mylogger.log("good!");
 		mylogger.error("damm it!");
+* To store logs with CouchDB. catlog ships with a couchdb logger:
+
+		var cat = require("catlog");
+		var c = catlog.Container.get();
+		
+		c.addLogger(catlog.loggers.Console);
+		c.addLogger(catlog.loggers.CouchDB, {
+			url: "http://localhost:5984",
+			dbname: "catlog"
+		});
+		c.log("rock in the couchdb");
 
 
 Contribute
