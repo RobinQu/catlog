@@ -101,12 +101,11 @@ HOW?
 		  if(event.level === "error") {
 		    this.raw.error(this.prefix, event.level, event.timestamp, event.category, event.messages.join(" "), event.stack.join("\n"));
 		  } else {
-		    this.raw.log(this.prefix, 
-		    event.level, event.timestamp, event.messages.join(" "), event.category);
+		    this.raw.log(this.prefix, event.level, event.timestamp, event.messages.join(" "), event.category);
 		  }
 		};
 		
-		//Use it as normal
+		//Use it as normal. You call optionally pass something your logger
 		var mylogger = catlog.Container.get("myapp", {prefix:"rock!"});
 		mylogger.addLogger(MyLogger);
 		
