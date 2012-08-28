@@ -114,15 +114,31 @@ HOW?
 		mylogger.error("damm it!");
 * To store logs with CouchDB. catlog ships with a couchdb logger:
 
-		var cat = require("catlog");
-		var c = catlog.Container.get();
-		
-		c.addLogger(catlog.loggers.Console);
-		c.addLogger(catlog.loggers.CouchDB, {
-			url: "http://localhost:5984",
-			dbname: "catlog"
-		});
-		c.log("rock in the couchdb");
+    1. Make sure you have the following design/view:
+
+            {
+              "_id": "_design/timeline",
+              "language":"javascript",
+              "views": {
+                "by_timestamp": {
+                  "map":"function(doc) {\n  emit(doc.timestamp, doc._rev);\n}"
+                }
+              }
+            }
+
+    2. Setup catlog:
+
+      		var cat = require("catlog");
+      		var c = catlog.Container.get();
+      		c.addLogger(catlog.loggers.Console);
+      		c.addLogger(catlog.loggers.CouchDB, {
+      			url: "http://localhost:5984",
+      			dbname: "catlog",
+            history: 60 * 60 * 1000 //only keep logs that generated in last hour
+      		});
+      		c.log("rock in the couchdb");
+
+  
 
 
 Contribute

@@ -3,7 +3,7 @@ var CATLOG = require("../index");
 var c = CATLOG.Container.get();
 
 c.addLogger(CATLOG.loggers.Console);
-c.addLogger(CATLOG.loggers.CouchDB);
+c.addLogger(CATLOG.loggers.CouchDB, {history:10 * 1000});
 
 function test(str) {
   c.log("rock in the couchdb");
@@ -11,5 +11,7 @@ function test(str) {
 }
 
 
-test("this is a string");
-
+i = 100;
+while(i--) {
+  test("this is a string");
+}
