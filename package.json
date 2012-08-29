@@ -1,6 +1,6 @@
 {
   "name": "catlog",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "Logging utility withou pain",
   "main": "index.js",
   "scripts": {
