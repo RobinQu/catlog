@@ -18,6 +18,7 @@ c.error("nice error");
 c.log({a:1, b:"nice"}, "nice object")
 c.error(new Error());
 c.log("holy\n{{stack}}");
+c.log(function() {})
 
 // keywords
 c.log("We are at {{current}}");
