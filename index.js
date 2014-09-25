@@ -7,9 +7,9 @@ module.exports = {
   Container: require("./lib/container"),
   setup: function(replaceConsole, opt) {
     opt = opt || {};
-    var C = require("./lib/container")
+    var C = require("./lib/container");
         c = C.get(opt.category, opt);
-    c.addLogger(require("./lib/loggers/console"), opt);
+    // c.addLogger(require("./lib/loggers/console"), opt);
     replaceConsole = typeof replaceConsole === "undefined" ? true : replaceConsole;
     if(replaceConsole) {
       if(!global._console) {

@@ -23,6 +23,7 @@ c.log(function() {})
 // keywords
 c.log("We are at {{current}}");
 
-var basic = CATLOG.Container.get("basic");
-basic.addLogger(CATLOG.loggers.Console);
+var basic = CATLOG.Container.get("basic", {printf: true});
+// basic.addLogger(CATLOG.loggers.Console);
 basic.warn("basic is not simple");
+basic.warn("let's say %s", "hello");
