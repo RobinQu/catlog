@@ -3,8 +3,7 @@
   "version": "0.1.0",
   "description": "Logging utility withou pain",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "https://github.com/RobinQu/catlog"
@@ -17,10 +16,11 @@
   "dependencies": {
     "colors": "*",
     "cycle": "*",
-    "eyes": "*",
-    "stack-trace": "*",
     "dateformat": "*",
-    "nano": "*"
+    "eyes": "*",
+    "nano": "*",
+    "printf": "^0.2.0",
+    "stack-trace": "*"
   },
   "author": "RobinQu",
   "license": "BSD"
