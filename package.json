@@ -17,10 +17,12 @@
     "console"
   ],
   "dependencies": {
-    "colors": "*",
+    "colors": "^1.1.2",
     "cycle": "*",
     "dateformat": "*",
+    "eventemitter3": "^1.1.1",
     "eyes": "*",
+    "lodash": "^3.10.1",
     "nano": "*",
     "printf": "^0.2.0",
     "stack-trace": "*"
