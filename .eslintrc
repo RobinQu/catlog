@@ -1,0 +1,18 @@
+{
+  "rules": {
+    "quotes": [1, "single"],
+    "strict": [2, "never"],
+    "no-underscore-dangle": 0,
+    "dot-notation": [2, {
+      "allowPattern": "^[a-z]+(_[a-z]+)+$"
+    }]
+  },
+  "ecmaFeatures": {
+    "generators": true,
+    "forOf": true
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  }
+}
