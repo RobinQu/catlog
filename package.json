@@ -19,11 +19,13 @@
   "dependencies": {
     "colors": "^1.1.2",
     "cycle": "*",
-    "dateformat": "*",
+    "dateformat": "^1.0.11",
     "eventemitter3": "^1.1.1",
     "eyes": "*",
     "lodash": "^3.10.1",
+    "mkdirp": "^0.5.1",
     "nano": "*",
+    "plugin-party": "0.0.2",
     "printf": "^0.2.0",
     "stack-trace": "*"
   },
@@ -31,6 +33,7 @@
   "license": "MIT",
   "devDependencies": {
     "chai": "^3.2.0",
+    "coffee-script": "^1.9.3",
     "eslint": "^1.0.0",
     "sinon": "^1.15.4"
   }
