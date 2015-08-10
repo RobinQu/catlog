@@ -56,9 +56,8 @@ describe 'Log method', ->
     expect(args[1].level).to.equal(params.level)
     expect(args[1].hostname).to.be.ok
     expect(args[1].pid).to.be.ok
-    expect(args[1].raw).to.be.ok
-    expect(args[1].raw[0]).to.equal('hello')
-    expect(args[1].formatted).to.be.ok
+    expect(args[1].raw).to.equal('hello')
+    expect(args[1].target).to.equal('stdout')
     emit.restore()
 
   it 'should write to stdout or stderr by params.target', ->
