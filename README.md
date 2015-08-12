@@ -1,5 +1,7 @@
 # catlog
 
+[![Build Status](https://travis-ci.org/RobinQu/catlog.svg)](https://travis-ci.org/RobinQu/catlog)
+
 Modern log utility for node apps
 
 * debug utility like [visionmedia/debug](https://github.com/visionmedia/debug)
