@@ -18,17 +18,12 @@
   ],
   "dependencies": {
     "colors": "^1.1.2",
-    "cycle": "*",
     "dateformat": "^1.0.11",
     "eventemitter3": "^1.1.1",
-    "eyes": "*",
     "ioredis": "^1.7.3",
     "lodash": "^3.10.1",
     "mkdirp": "^0.5.1",
-    "nano": "*",
-    "plugin-party": "~0.1.0",
-    "printf": "^0.2.0",
-    "stack-trace": "*"
+    "plugin-party": "~0.1.0"
   },
   "author": "RobinQu",
   "license": "MIT",

@@ -1,11 +1,11 @@
-logMethod = require('../lib/log_method')
 expect = require('chai').expect
 sinon = require 'sinon'
 
 
 describe 'Log method', ->
 
-  ctx = require('../lib/context')
+  ctx = require('../lib/context').one
+  logMethod = require('../lib/log_method').bind(ctx)
   raw = require('../lib/raw')
 
   it 'should plant log method to target', ->

@@ -1,11 +1,5 @@
-var ctx = require('./lib/context');
+var Context = require('./lib/context');
 
-module.exports = function (options) {//logger factory
-  return ctx.logger(options);
-};
+module.exports = Context.one.logger.bind(Context.one);
 
-module.exports.configure = function (fn) {
-  if(fn) {
-    fn.call(ctx);
-  }
-};
+module.exports.Context = Context;
