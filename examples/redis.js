@@ -1,12 +1,14 @@
-var catlog = require('..');
-var Redis = require('ioredis');
+'use strict';
 
-var logger = catlog();
+const catlog = require('..');
+const Redis = require('ioredis');
+
+const logger = catlog();
 logger.configure(function (ctx) {
   ctx.install('handler', 'redis');
 });
 
-var redis = new Redis();
+const redis = new Redis();
 redis.psubscribe('catlog:message:*', function () {
   console.log(arguments);
   logger.info('i am a superstar');

@@ -19,7 +19,7 @@ Modern log utility for node apps
 Just like the popular [visionmedia/debug](https://github.com/visionmedia/debug).
 
 ```
-var debug = require('catlog')('app:main');
+const debug = require('catlog')('app:main');
 
 debug('I am here');
 debug('Hi, babe!');
@@ -32,7 +32,7 @@ But the log goes to other handlers ([fs_handler](lib/plugins/fs_handler.js) as d
 Behave like old-fashined log utilites.
 
 ```
-var logger = require('catlog')();
+const logger = require('catlog')();
 
 logger.info('good news');
 logger.warn('important notice');
@@ -47,7 +47,7 @@ logger.log('bad news');
 All settings are shared in the same process. And configure it on logging context, using:
 
 ```
-var logger = require('catlog')({
+const logger = require('catlog')({
   methods: {
     foobar: {
       target: 'stdout',

@@ -18,7 +18,7 @@ describe('Context', function () {
     expect(ctx.handlers.length).to.equal(1);
     const handler = ctx.plugin('handler', ctx.handlers[0]);
     expect(handler).to.be.ok;
-    var fp = `/tmp/logs/${handler.fileIds.info}`;
+    const fp = `/tmp/logs/${handler.fileIds.info}`;
     expect(fs.existsSync(fp)).to.be.true;
     expect(fs.readFileSync(fp)).to.include('test');
   });
