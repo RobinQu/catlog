@@ -12,7 +12,11 @@ Modern log utility for node apps
   * context-based configuration
 
 
-## Usage
+## Documentation
+
+See more at [http://robinqu.github.io/catlog](http://robinqu.github.io/catlog).
+
+## TL;DR
 
 ### Simple debug
 
