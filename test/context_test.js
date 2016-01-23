@@ -20,7 +20,7 @@ describe('Context', function () {
     expect(handler).to.be.ok;
     const fp = `/tmp/logs/${handler.fileIds.info}`;
     expect(fs.existsSync(fp)).to.be.true;
-    expect(fs.readFileSync(fp)).to.include('test');
+    expect(fs.readFileSync(fp, 'utf8')).to.include('test');
   });
 
 
