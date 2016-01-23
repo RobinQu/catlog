@@ -1,6 +1,8 @@
 # catlog
 
-[![Build Status](https://travis-ci.org/RobinQu/catlog.svg)](https://travis-ci.org/RobinQu/catlog)
+[![Build Status](https://travis-ci.org/RobinQu/catlog.svg)](https://travis-ci.org/RobinQu/catlog) [![Coverage Status](https://coveralls.io/repos/github/RobinQu/catlog/badge.svg?branch=master)](https://coveralls.io/github/RobinQu/catlog?branch=master)
+
+![NPM](https://nodei.co/npm/catlog.png?downloads=true&downloadRank=true&stars=true)
 
 Modern log utility for node apps
 
