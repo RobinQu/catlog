@@ -7,3 +7,4 @@ temp
 *.rdb
 esdoc
 jsdoc
+coverage
