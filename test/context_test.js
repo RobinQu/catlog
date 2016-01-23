@@ -6,7 +6,7 @@ const expect = require('chai').expect;
 
 describe('Context', function () {
 
-  it('should create with options', function () {
+  it('should create with options', function (done) {
     const ctx = new Context({
       plugins: [
         {type: 'handler', name: 'fs', dir: '/tmp/logs'}
@@ -19,8 +19,11 @@ describe('Context', function () {
     const handler = ctx.plugin('handler', ctx.handlers[0]);
     expect(handler).to.be.ok;
     const fp = `/tmp/logs/${handler.fileIds.info}`;
-    expect(fs.existsSync(fp)).to.be.true;
-    expect(fs.readFileSync(fp, 'utf8')).to.include('test');
+    setImmediate(function () {
+      expect(fs.existsSync(fp)).to.be.true;
+      expect(fs.readFileSync(fp, 'utf8')).to.include('test');
+      done();
+    });
   });
 
 
