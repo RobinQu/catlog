@@ -1,5 +1,5 @@
 {
-  "extends": "../.eslintrc",
+  "extends": "../node_modules/rcfiles/resources/lintrc_es6",
   "rules": {
     "no-unused-expressions": 0
   }

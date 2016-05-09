@@ -1,6 +1,6 @@
 {
   "name": "catlog",
-  "version": "1.0.5",
+  "version": "1.0.8",
   "description": "Logging utility withou pain",
   "main": "lib/index.js",
   "scripts": {
@@ -34,11 +34,13 @@
   "devDependencies": {
     "chai": "^3.2.0",
     "coveralls": "^2.11.6",
-    "eslint": "^1.0.0",
+    "eslint": "^2.9.0",
     "istanbul": "^0.4.2",
     "minami": "^1.1.1",
     "mocha": "^2.2.5",
     "mocha-lcov-reporter": "^1.0.0",
+    "moment": "~2.13.0",
+    "rcfiles": "^1.1.2",
     "sinon": "^1.15.4"
   }
 }

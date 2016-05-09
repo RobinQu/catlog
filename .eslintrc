@@ -1,5 +1,5 @@
 {
-  "extends": "./node_modules/rcfiles/.eslintrc",
+  "extends": "./node_modules/rcfiles/resources/lintrc_es6",
   "rules": {
     "no-console": 0
   }
